@@ -3,7 +3,8 @@ import './App.css';
 import {
   CounterClass,
   CounterWithState,
-  CounterWithReducer
+  CounterWithReducer,
+  CounterWithLifecycle
 } from './Counter';
 
 const App = () =>
@@ -11,6 +12,7 @@ const App = () =>
     <CounterClass />
     <CounterWithState />
     <CounterWithReducer />
+    <CounterWithLifecycle />
   </div>
 
 export default App;
