@@ -81,7 +81,6 @@ export const CounterWithLifecycle = () => {
   const [ backgroundColor, setBackgroundColor ] = useState(newColor());
 
   const changeBackgroundColor = (e) => {
-    console.log('Clicked!');
     e.preventDefault();
     setBackgroundColor(newColor());
   };
