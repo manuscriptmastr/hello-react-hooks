@@ -1,18 +1,10 @@
 import React from 'react';
 import './App.css';
-import {
-  CounterClass,
-  CounterWithState,
-  CounterWithReducer,
-  CounterWithLifecycle
-} from './Counter';
+import Counter from './Counter';
 
 const App = () =>
   <div className="app">
-    <CounterClass />
-    <CounterWithState />
-    <CounterWithReducer />
-    <CounterWithLifecycle />
+    <Counter />
   </div>
 
 export default App;
