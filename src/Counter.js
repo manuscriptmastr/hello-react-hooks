@@ -80,17 +80,16 @@ export const CounterWithLifecycle = () => {
   const newColor = () => backgroundColors[Math.round(Math.random() * (backgroundColors.length - 1))];
   const [ backgroundColor, setBackgroundColor ] = useState(newColor());
 
+  const changeBackgroundColor = (e) => {
+    console.log('Clicked!');
+    e.preventDefault();
+    setBackgroundColor(newColor());
+  };
+
   const addColorListener = () =>
-    window.addEventListener('click', (e) => {
-      e.preventDefault();
-      setBackgroundColor(newColor());
-    });
-  
+    window.addEventListener('click', changeBackgroundColor);
   const removeColorListener = () =>
-    window.removeEventListener('click', (e) => {
-      e.preventDefault();
-      setBackgroundColor(newColor());
-    });
+    window.removeEventListener('click', changeBackgroundColor);
 
   useEffect(() => {
     addColorListener();
