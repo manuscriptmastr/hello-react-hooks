@@ -1,6 +1,7 @@
-import React, { Component, useState, useReducer, useEffect } from 'react';
+import React, { Component, useState, useReducer, useContext, useEffect } from 'react';
 import './Counter.css';
 import counterReducer from './reducers/counter';
+import CounterContext from './contexts/CounterContext';
 
 export class CounterClass extends Component {
   constructor(props) {
@@ -104,3 +105,15 @@ export const CounterWithLifecycle = () => {
     </div>
   );
 };
+
+export const CounterWithContext = () => {
+  const { state: { count, backgroundColor }, dispatch } = useContext(CounterContext);
+  return (
+    <div className="counter" style={{ backgroundColor }}>
+      <h1>{count}</h1>
+      <button onClick={() => dispatch({ type: 'DECREMENT' })}>-</button>
+      <button onClick={() => dispatch({ type: 'RESET' })}>Reset</button>
+      <button onClick={() => dispatch({ type: 'INCREMENT' })}>+</button>
+    </div>
+  );
+}

@@ -1,5 +1,13 @@
+const backgroundColors = ['aqua', 'orange', 'greenyellow', 'pink'];
+const newColor = () => backgroundColors[Math.round(Math.random() * (backgroundColors.length - 1))];
+
 export default (state, action) => {
   switch (action.type) {
+    case 'COLOR':
+      return {
+        ...state,
+        color: newColor()
+      }
     case 'DECREMENT':
       return {
         ...state,
