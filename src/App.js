@@ -8,7 +8,7 @@ import {
   CounterWithContext
 } from './Counter';
 
-import CounterContext from './contexts/CounterContext';
+import CounterProvider from './CounterProvider';
 
 const App = () =>
   <div className="app">
@@ -16,9 +16,9 @@ const App = () =>
     <CounterWithState />
     <CounterWithReducer />
     <CounterWithLifecycle />
-    <CounterContext.Provider>
+    <CounterProvider>
       <CounterWithContext />
-    </CounterContext.Provider>
+    </CounterProvider>
   </div>
 
 export default App;

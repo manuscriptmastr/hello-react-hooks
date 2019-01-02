@@ -1,9 +1,11 @@
 import React, { useReducer } from 'react';
 import CounterContext from './contexts/CounterContext';
+import reducer from './reducers/counter';
 
 const CounterProvider = ({ children }) => {
   const [ state, dispatch ] = useReducer(
-    reducer
+    reducer,
+    { count: 0, backgroundColor: 'orange' }
   );
   return (
     <CounterContext.Provider

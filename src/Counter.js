@@ -108,6 +108,7 @@ export const CounterWithLifecycle = () => {
 
 export const CounterWithContext = () => {
   const { state: { count, backgroundColor }, dispatch } = useContext(CounterContext);
+
   return (
     <div className="counter" style={{ backgroundColor }}>
       <h1>{count}</h1>

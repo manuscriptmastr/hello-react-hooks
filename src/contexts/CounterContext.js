@@ -1,5 +1,5 @@
 import { createContext } from 'react';
 
-const CounterContext = createContext({ count: 0, backgroundColor: 'orange' });
+const CounterContext = createContext();
 
 export default CounterContext;
