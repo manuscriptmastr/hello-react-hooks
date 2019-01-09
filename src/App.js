@@ -8,7 +8,7 @@ import {
   CounterWithContext
 } from './Counter';
 
-import CounterProvider from './CounterProvider';
+import CounterProvider from './contexts/CounterProvider';
 
 const App = () =>
   <div className="app">

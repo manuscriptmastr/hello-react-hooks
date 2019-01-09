@@ -1,6 +1,6 @@
 import React, { useReducer } from 'react';
-import CounterContext from './contexts/CounterContext';
-import reducer from './reducers/counter';
+import CounterContext from './CounterContext';
+import reducer from '../reducers/counter';
 
 const CounterProvider = ({ children }) => {
   const [ state, dispatch ] = useReducer(
