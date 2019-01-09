@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import './Counter.css';
 import CounterContext from './contexts/CounterContext';
 
-const CounterWithContext = () => {
+export default () => {
   const { state: { count, backgroundColor }, dispatch } = useContext(CounterContext);
 
   return (
@@ -14,5 +14,3 @@ const CounterWithContext = () => {
     </div>
   );
 };
-
-export default CounterWithContext;
