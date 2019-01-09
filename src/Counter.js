@@ -8,6 +8,10 @@ export default () => {
   return (
     <div className="counter" style={{ backgroundColor }}>
       <h1>{count}</h1>
+      <h2>
+        The color is {backgroundColor}
+        <button onClick={() => dispatch({ type: 'COLOR' })}>Change color</button>
+      </h2>
       <button onClick={() => dispatch({ type: 'DECREMENT' })}>-</button>
       <button onClick={() => dispatch({ type: 'RESET' })}>Reset</button>
       <button onClick={() => dispatch({ type: 'INCREMENT' })}>+</button>

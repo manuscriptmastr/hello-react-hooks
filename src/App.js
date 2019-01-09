@@ -7,7 +7,12 @@ const App = () =>
   <div className="app">
     <CounterProvider>
       <CounterWithContext />
+      <CounterWithContext />
     </CounterProvider>
+    <CounterProvider>
+      <CounterWithContext />
+    </CounterProvider>
+
   </div>
 
 export default App;

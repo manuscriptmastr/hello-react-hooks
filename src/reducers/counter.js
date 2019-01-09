@@ -6,7 +6,7 @@ export default (state, action) => {
     case 'COLOR':
       return {
         ...state,
-        color: newColor()
+        backgroundColor: newColor()
       }
     case 'DECREMENT':
       return {
