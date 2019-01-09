@@ -117,4 +117,4 @@ export const CounterWithContext = () => {
       <button onClick={() => dispatch({ type: 'INCREMENT' })}>+</button>
     </div>
   );
-}
+};
