@@ -1,0 +1,7 @@
+.content {
+  overflow-y: visible;
+}
+
+.content.no-overflow {
+  overflow-y: hidden;
+}

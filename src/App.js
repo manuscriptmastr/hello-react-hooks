@@ -1,24 +1,10 @@
 import React from 'react';
 import './App.css';
-import {
-  CounterClass,
-  CounterWithState,
-  CounterWithReducer,
-  CounterWithLifecycle,
-  CounterWithContext
-} from './Counter';
-
-import CounterProvider from './contexts/CounterProvider';
+import Content from './Content';
 
 const App = () =>
   <div className="app">
-    <CounterClass />
-    <CounterWithState />
-    <CounterWithReducer />
-    <CounterWithLifecycle />
-    <CounterProvider>
-      <CounterWithContext />
-    </CounterProvider>
+    <Content superLongText="Hello super long text." />
   </div>
 
 export default App;
